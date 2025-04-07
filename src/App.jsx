@@ -3,7 +3,7 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from "./Pages/Home.jsx";
 import Signup from "./Pages/Signup.jsx";
 import Login from "./Pages/Login.jsx";
-import Error from "./Pages/Error.Jsx";
+import Error from "./Pages/Error.jsx";
 import Dashboard from "./Components/Dashboard/Dashboard.jsx";
 import MailVerficationSucess from "./Components/MailVerification/MailVerficationSucess.jsx";
 import MailVerificationFailed from "./Components/MailVerification/MailVerificationFailed.jsx";

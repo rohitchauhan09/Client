@@ -1,6 +1,6 @@
 import React from "react";
 import { IoMdAlert } from "react-icons/io";
-import { Link } from "react-router-dom";
+import { Link } from "react-router-dom"; 
 import { motion } from "framer-motion";
 
 const Error = () => {

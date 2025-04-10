@@ -14,7 +14,7 @@ const LatestPosts = () => {
   useEffect(() => {
     const getBlogsData = async () => {
       try {
-        const response = await axios.get("http://localhost:3000/api/getallblogs");
+        const response = await axios.get("https://server-pnqp.onrender.com/api/getallblogs");
         setPosts(response.data.blogs);
       } catch (error) {
         console.error("Error fetching blogs:", error.message);

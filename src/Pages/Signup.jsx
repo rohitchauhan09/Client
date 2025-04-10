@@ -60,7 +60,7 @@ const SignUp = () => {
     e.preventDefault();
     if (validateForm()) {
       console.log("Form Data:", formData);
-      const response = await axios.post("http://localhost:3000/api/signup", formData);
+      const response = await axios.post("https://server-pnqp.onrender.com/api/signup", formData);
       toast.success(response.data.message);
       navigate("/mailverification");
     }

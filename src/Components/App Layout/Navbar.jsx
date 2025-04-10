@@ -61,7 +61,7 @@ const Navbar = () => {
       </div>
 
       <div className="hidden md:flex items-center">
-        <Link to="/login">
+        <Link to="/createbloginfo">
           <button className="bg-blue-500 cursor-pointer text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition">
             Create Blog
           </button>

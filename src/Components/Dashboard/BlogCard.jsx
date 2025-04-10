@@ -20,7 +20,7 @@ const BlogCard = () => {
     const fetchBlogData = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:3000/api/getuserdata/${userId}`
+          `https://server-pnqp.onrender.com/api/getuserdata/${userId}`
         );
         setBlogData(response.data.existingUser.createdBlogs);
       } catch (error) {
@@ -47,7 +47,7 @@ const BlogCard = () => {
 
   const handleDelete = async () => {
     try {
-      await axios.delete(`http://localhost:3000/api/deleteblog/${blogId}`);
+      await axios.delete(`https://server-pnqp.onrender.com/api/deleteblog/${blogId}`);
       setSelectedBlog(null);
       setBlogData(blogData.filter((blog) => blog._id !== blogId));
       toast.success("Blog Deleted Successfully");
@@ -58,13 +58,16 @@ const BlogCard = () => {
 
   const handleSave = async () => {
     try {
-      await axios.put(`http://localhost:3000/api/editblog/${blogId}`, editForm);
+      await axios.put(
+        `https://server-pnqp.onrender.com/api/editblog/${blogId}`,
+        editForm
+      );
       setSelectedBlog({ ...selectedBlog, ...editForm });
       setIsEditing(false);
 
       const formData = new FormData();
       formData.append("file", editForm.image);
-      await axios.post(`http://localhost:3000/api/uploadblog/${blogId}`, formData, {
+      await axios.post(`https://server-pnqp.onrender.com/api/uploadblog/${blogId}`, formData, {
         headers: { "Content-Type": "multipart/form-data" },
       });
 

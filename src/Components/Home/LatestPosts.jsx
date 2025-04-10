@@ -26,7 +26,7 @@ const LatestPosts = () => {
   // Fetch comments for a selected blog
   const fetchComments = async (blogId) => {
     try {
-      const response = await axios.get(`http://localhost:3000/api/getcomments/${blogId}`);
+      const response = await axios.get(`https://server-pnqp.onrender.com/api/getcomments/${blogId}`);
       setBlogComments(response.data.blogComments);
     } catch (error) {
       console.error("Error fetching comments:", error.message);
@@ -51,7 +51,7 @@ const LatestPosts = () => {
       }
 
       const response = await axios.post(
-        `http://localhost:3000/api/addcomments/${userId}/${blogId}`,
+        `https://server-pnqp.onrender.com/api/addcomments/${userId}/${blogId}`,
         { comment },
         {
           headers: {

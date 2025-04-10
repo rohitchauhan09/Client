@@ -20,9 +20,12 @@ const EnterEmail = () => {
       }
 
       setLoading(true);
-      const response = await axios.post("http://localhost:3000/api/sendotp", {
-        email,
-      });
+      const response = await axios.post(
+        "https://server-pnqp.onrender.com/api/sendotp",
+        {
+          email,
+        }
+      );
 
       if (response.status === 200) {
         toast.success("OTP sent successfully");

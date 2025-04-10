@@ -25,7 +25,10 @@ const Dashboard = () => {
     formData.append("file", file);
     const userId = localStorage.getItem("userId");
     try {
-      const response = await axios.post(`http://localhost:3000/api/upload/${userId}`, formData);
+      const response = await axios.post(
+        `https://server-pnqp.onrender.com/api/upload/${userId}`,
+        formData
+      );
       if (response) {
         toast.success("Image uploaded successfully");
         setUserImage(response.data.filePath);

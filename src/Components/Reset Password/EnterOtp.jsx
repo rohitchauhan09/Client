@@ -21,7 +21,7 @@ const EnterOtp = () => {
 
     try {
       setLoading(true);
-      const response = await axios.post("http://localhost:3000/api/verifyotp", {
+      const response = await axios.post("https://server-pnqp.onrender.com/api/verifyotp", {
         otp,
         email,
       });

@@ -5,12 +5,12 @@ import { motion } from "framer-motion";
 
 const Error = () => {
   return (
-    <div className="flex flex-col items-center justify-center min-h-screen bg-[#0b1120] text-white ">
+    <div className="flex flex-col items-center justify-center min-h-screen bg-[#0b1120] text-white">
       <motion.div
         initial={{ opacity: 0, scale: 0.8 }}
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.5 }}
-        className="bg-[#1a2332] text-white px-4 py-6 rounded-2xl shadow-xl flex flex-col items-center w-[480px] text-center"
+        className="bg-[#1a2332] text-white px-6 py-8 rounded-2xl shadow-xl flex flex-col items-center w-[480px] text-center"
       >
         <IoMdAlert className="text-red-500 w-16 h-16 mb-4" />
         <h1 className="text-3xl font-bold">Oops! Something went wrong.</h1>

@@ -25,7 +25,7 @@ const ResetPassword = () => {
 
     try {
       setLoading(true);
-      const response = await axios.post("http://localhost:3000/api/resetpassword", {
+      const response = await axios.post("https://server-pnqp.onrender.com/api/resetpassword", {
         email,
         password: newPassword,
       });

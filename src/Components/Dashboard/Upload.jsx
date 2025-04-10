@@ -13,7 +13,10 @@ const Upload = () => {
       formData.append("file", file)
       const id = "67caeba867d96886d34ae8e0"
       try {
-          const response = await axios.post(`http://localhost:3000/api/upload/${id}`, formData )
+          const response = await axios.post(
+            `https://server-pnqp.onrender.com/api/upload/${id}`,
+            formData
+          );
           console.log(response);
       } catch (error) {
           console.log(error.message)

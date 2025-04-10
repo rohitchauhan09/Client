@@ -29,7 +29,7 @@ const Login = () => {
     e.preventDefault();
     if (validateForm()) {
       try {
-        const response = await axios.post("http://localhost:3000/api/login", formData);
+        const response = await axios.post("https://server-pnqp.onrender.com/api/login", formData);
         const token = response.headers.authorization.split(" ")[1];
         setUserId(response.data.userId);
         setUsername(response.data.username);

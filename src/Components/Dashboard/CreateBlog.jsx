@@ -20,7 +20,7 @@ const CreateBlog = () => {
 
     try {
       const blogResponse = await axios.post(
-        `http://localhost:3000/api/createblog/${userId}`,
+        `https://server-pnqp.onrender.com/api/createblog/${userId}`,
         { title, category, content },
         { headers: { "Content-Type": "application/json" } }
       );
@@ -35,7 +35,7 @@ const CreateBlog = () => {
       formData.append("file", image);
 
       const imageResponse = await axios.post(
-        `http://localhost:3000/api/uploadblog/${blogId}`,
+        `https://server-pnqp.onrender.com/api/uploadblog/${blogId}`,
         formData,
         {
           headers: {

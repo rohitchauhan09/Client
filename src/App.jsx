@@ -19,6 +19,7 @@ import HomeDashboard from "./Components/Dashboard/HomeDashboard.jsx";
 import Upload from "./Components/Dashboard/Upload.jsx";
 import LatestBlogs from "./Components/Latest/LatestBlogs.jsx";
 import About from "./Pages/About.jsx"
+import CreateBlogInfo from "./Components/App Layout/CreateBlogInfo.jsx"
 
 const router = createBrowserRouter([
   {
@@ -89,9 +90,13 @@ const router = createBrowserRouter([
     element: <Upload />,
   },
   {
-    path: "latestblogs",
+    path: "/latestblogs",
     element: <LatestBlogs />,
   },
+  {
+    path: "/createbloginfo",
+    element: <CreateBlogInfo/>
+  }
 ]);
 
 const App = () => {

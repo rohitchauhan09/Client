@@ -68,37 +68,40 @@ const CreateBlog = () => {
       className="bg-[#0b1120] text-white p-4 sm:p-6 md:p-8 rounded-lg shadow-lg w-full max-w-2xl mx-auto"
     >
       <h2 className="text-2xl sm:text-3xl font-bold text-center mb-6">Create a New Blog</h2>
-      <motion.form onSubmit={handleSubmit} className="space-y-4 sm:space-y-5">
-        <div className="flex flex-col gap-1">
+      <motion.form
+        onSubmit={handleSubmit}
+        className="space-y-4 sm:space-y-5 flex flex-col"
+      >
+        <div className="flex flex-col gap-1 w-full">
           <label className="text-base sm:text-lg">Blog Title:</label>
           <input
             type="text"
             value={title}
             onChange={(e) => setTitle(e.target.value)}
             placeholder="Enter blog title"
-            className="px-3 py-2 rounded-lg bg-[#1a2332] text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="px-3 py-2 rounded-lg bg-[#1a2332] text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500 w-full"
             required
           />
         </div>
 
-        <div className="flex flex-col gap-1">
+        <div className="flex flex-col gap-1 w-full">
           <label className="text-base sm:text-lg">Content:</label>
           <textarea
             value={content}
             onChange={(e) => setContent(e.target.value)}
             placeholder="Write your content here..."
             rows="4"
-            className="p-2 rounded-lg bg-[#1a2332] text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none"
+            className="p-2 rounded-lg bg-[#1a2332] text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500 resize-none w-full"
             required
           ></textarea>
         </div>
 
-        <div className="flex flex-col gap-1">
+        <div className="flex flex-col gap-1 w-full">
           <label className="text-base sm:text-lg">Category:</label>
           <select
             value={category}
             onChange={(e) => setCategory(e.target.value)}
-            className="p-2 rounded-lg bg-[#1a2332] text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500"
+            className="p-2 rounded-lg bg-[#1a2332] text-white border border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500 w-full"
             required
           >
             <option value="">Select Category</option>
@@ -109,13 +112,13 @@ const CreateBlog = () => {
           </select>
         </div>
 
-        <div className="flex flex-col gap-1">
+        <div className="flex flex-col gap-1 w-full">
           <label className="text-base sm:text-lg">Upload Image:</label>
           <input
             type="file"
             accept="image/*"
             onChange={(e) => setImage(e.target.files[0])}
-            className="p-2 rounded-lg bg-[#1a2332] text-white border border-gray-600 focus:outline-none"
+            className="p-2 rounded-lg bg-[#1a2332] text-white border border-gray-600 focus:outline-none w-full"
           />
         </div>
 
